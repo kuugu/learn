@@ -69,6 +69,18 @@ Ways to increase speed:
 - Launching thread blocks with lesser number of threads than elements to be processed. This will amortize the cost of index calculation 
 - Using shared memory. Shared memory access is orders of magnitude faster than global memory, store things in shared memory process and store back to DRAM 
 - Avoiding bank conflicts: set shared memory data size according to the number of banks in shared memory to reduce conflicts. 
+- making sure that consecutive threads are as less divergent as possible (because consecutive thread IDs are going to be in the same warp & warp divergence kills)
+
+Kernel Fusion:
+- Advantages: 
+    - data reuse using on-chip memory improves performance 
+    - reduces off-chip traffic (transfers to/from global memory)
+    - reduces kernel launch overhead 
+    - utilizing maximum threads in the GPU (?)
+    - doesn't always improve speed: resources in SM are limited, overhead might make it slower, may introduce divergence 
+- Types: 
+    - Inner Thread Fusion: combines computations of two kernels into a single thread 
+    - Inner Block Fusion: 
 
 Control Flow Divergence: 
 - for branches, PTX assembler sets a "branch synchronization marker" on a stack containing a "mask" with bit values for each thread (in a warp?)
