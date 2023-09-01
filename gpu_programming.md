@@ -80,7 +80,8 @@ Kernel Fusion:
     - doesn't always improve speed: resources in SM are limited, overhead might make it slower, may introduce divergence 
 - Types: 
     - Inner Thread Fusion: combines computations of two kernels into a single thread 
-    - Inner Block Fusion: in the new block, share the number of threads between the constituent kernels 
+    - Inner Block Fusion: distribute two kernels between threads of a single block 
+    - Inter Block Fusion: 
 
 Control Flow Divergence: 
 - for branches, PTX assembler sets a "branch synchronization marker" on a stack containing a "mask" with bit values for each thread (in a warp?)
