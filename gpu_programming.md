@@ -80,8 +80,22 @@ Kernel Fusion:
     - doesn't always improve speed: resources in SM are limited, overhead might make it slower, may introduce divergence 
 - Types: 
     - Inner Thread Fusion: combines computations of two kernels into a single thread 
-    - Inner Block Fusion: distribute two kernels between threads of a single block 
+    - Inner Block Fusion: 
+        - distribute two kernels between threads of a single block 
+        - if kernel data size usage is very different, this might cause delays 
+        - not a good idea for blocks which requires synchronization 
     - Inter Block Fusion: 
+        - block level stacking, just launch K1 + K2 blocks
+        - kernels with highly unbalanced load wont have good concurrency (is that bad?)
+
+Thread Coarsening:
+- Making each thread do more work, (aim is to access optimizations related to reduced initalization time, reduced context switching etc..)
+- But, this reduces parallelism, because GPU has to allot more resources (registers, SPs etc..) to each thread. i.e. occupancy is reduced 
+- occupancy = number of active threads per SM / total number of threads allowed per SM
+- coarsening factor - number of times the body of the thread is replicated (optimal value is architecture and program dependent)
+- types of coarsening
+    - Thread-level coarsening: combining two or more threads from a single block, number of threads per block is reduced   
+    - Block-level coarsening: combining two or more threads from multiple blocks, number of threads per block remains same but number of blocks reduces
 
 Control Flow Divergence: 
 - for branches, PTX assembler sets a "branch synchronization marker" on a stack containing a "mask" with bit values for each thread (in a warp?)
