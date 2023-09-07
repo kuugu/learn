@@ -28,3 +28,5 @@
 - Ex: Number of emails in 1 hour, here event rate (say per second) is small, but overall number is not 
 - This is a good usecase to model the data with poisson's distribution
 
+#### Resources: 
+[Harvard: Statistics 101](https://www.youtube.com/playlist?list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo)
