@@ -13,6 +13,8 @@
 - Expected Value: $E(X) = \sum xP(x)$
 - Linearity of Expected Value: $E(X+Y)=E(X)+E(Y)$, $E(cX)=cE(X)$
 - Variance: $E[X^2]-E[X]^2$
+- Stochastic Process: Random Variables evolving over time. 
+- Markov Process: A system where past, future are conditionally independent given the present  
 
 ##### Axioms of Probability: 
 - $P(\varnothing) = 0, P(S) = 1$, ($\varnothing$ is the empty set)
