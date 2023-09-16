@@ -1,13 +1,13 @@
 ### Database Systems 
 
-##### Parts of a Database System:  
+#### Parts of a Database System:  
 - Query Planning
 - Operator Execution 
 - Access Methods 
 - Buffer Pool Manager 
 - Disk Manager 
 
-###### Latency Numbers for Storage Hierarchy:
+Latency Numbers for Storage Hierarchy:
 - 1ns          - L1 Cache Ref    - 1s (if this is 1s, rest of them are as below) 
 - 4ns          - L2 Cache Ref    - 4s
 - 100ns        - DRAM            - 100s   
@@ -16,7 +16,7 @@
 - 50000000ns   - Network Storage - 1.5years
 - 1000000000ns - Tape Archives   - 31.7years
 
-###### Disk Manager: 
+#### Disk Manager: 
 - Why not use mmap?
     - works good for read-only access, but complicated for multiple writers 
     - Transaction safety: 
@@ -42,7 +42,7 @@
     - I/O is the main bottleneck if DBMS gets data from disk during query execution 
     - 
  
-###### Storage Models:
+#### Storage Models:
 - Different Storage Models for different Workloads: 
     - Online Transaction Processing (OLTP): Fast operations that reads a small amount of data each time. 
     - Online Analytical Processing (OLAP): Complex queries that read a lot of data to compute aggregates
@@ -56,16 +56,16 @@
     - Hybrid Storage Model (PAX):  
         - Partition Attributes Across. 
 
-##### Database Design Goals:
+#### Database Design Goals:
 - Maximize sequential access from disk 
 - Each layer of the DBMS needs to be independent of the other layers 
 - Applications should never rely on record identifier to mean anything. 
 - 
 
-##### Definitions: 
+#### Definitions: 
 - Page: fixed-size block of data, has a unique identifier for each of them 
 - Record Identifier: A unique identifier for a record that points to the location in the DBMS 
 
-##### Resources: 
-(CMU Intro to Database Systems 2023)[https://www.youtube.com/playlist?list=PLSE8ODhjZXjbj8BMuIrRcacnQh20hmY9g]
-(CMU Intro to Database Systems 2022)[https://www.youtube.com/playlist?list=PLSE8ODhjZXjaKScG3l0nuOiDTTqpfnWFf]
+#### Resources: 
+[CMU Intro to Database Systems 2023](https://www.youtube.com/playlist?list=PLSE8ODhjZXjbj8BMuIrRcacnQh20hmY9g)
+[CMU Intro to Database Systems 2022](https://www.youtube.com/playlist?list=PLSE8ODhjZXjaKScG3l0nuOiDTTqpfnWFf)
