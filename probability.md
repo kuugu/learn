@@ -9,7 +9,7 @@
 - Independent Events: A, B are independent if $P(A\cap B) = P(A)P(B)$
 - Conditional Probability: $P(A\mid B) = P(A\cap B)/P(B)$
 - Bayes Rule: $ P(A\mid B) = P(A)P(B\mid A)/P(B)$
-- Random Variable: $f:S\mapsto \R$
+- Random Variable: $f:S\mapsto \mathbb{R}$
 - Expected Value: $E(X) = \sum xP(x)$
 - Linearity of Expected Value: $E(X+Y)=E(X)+E(Y)$, $E(cX)=cE(X)$
 - Variance: $E[X^2]-E[X]^2$
