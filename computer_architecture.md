@@ -11,3 +11,4 @@
 
 ##### Resources: 
 [What every programmer should know about floating-point arithmetic](https://www.phys.uconn.edu/~rozman/Courses/P2200_15F/downloads/floating-point-guide-2015-10-15.pdf)
+[What every programmer should know about Memory](https://people.freebsd.org/~lstewart/articles/cpumemory.pdf)
