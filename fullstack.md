@@ -1,6 +1,8 @@
 ### FULLSTACK NOTES 
 
-##### Core of Networking: 
+#### Core of Networking: 
+
+
 
 
 #### MERN Fullstack Development 
@@ -21,10 +23,17 @@
 - HTTP:
     - Application Layer Protocol for the distribution of data. 
     - Methods: GET (get some data), POST (add new data), DELETE (remove data), PUT (modify data)
-    - query strings: parameters provided along with URL which is made available to the web server (ex: example.com/over/there?name=ferret)
+    - query strings: parameters provided along with URL which is made available to the web server 
+    - ex: example.com/over/there?name=ferret
 - Authentication 
 
-##### TODO: 
+
+```JS 
+jwt.sign(payload, secretOrPrivateKey, [options, callback])
+jwt.verify(token, secretOrPublicKey, [options, callback])
+```
+
+#### TODO: 
 [Low level Networking](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi)
 
 #### Resources: 
