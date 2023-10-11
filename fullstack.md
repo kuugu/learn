@@ -2,6 +2,11 @@
 
 #### Core of Networking: 
 
+##### Internet Sockets 
+- Everything in linux is a file, the networking interface is also through a file descriptor 
+- socket descriptor, we have receive() and send() (more flexible) instead of read() and write()
+- mainly two types of sockets: Datagram - SOCK_DGRAM and Stream - SOCK_STREAM 
+- Stream - reliable two way communication  
 
 
 
@@ -38,3 +43,4 @@ jwt.verify(token, secretOrPublicKey, [options, callback])
 
 #### Resources: 
 [JS Event Loop](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+[Beej's Guide to Network Programming](https://beej.us/guide/bgnet/html/split/index.html)
