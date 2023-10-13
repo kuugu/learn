@@ -2,6 +2,15 @@
 
 #### Core of Networking: 
 
+##### OSI Model: 
+- Application Layer (FTP, telnet, etc..)
+- Presentation Layer (Compression, Encryption, etc..)
+- Session Layer (opening/closing connections)
+- Transport Layer (TCP, UDP)
+- Network Layer (between different newtorks, Packets, routing)
+- Datalink Layer (within same network)
+- Physical Layer (Switches, cables and bistreams)
+
 ##### Internet Sockets 
 - Everything in linux is a file, the networking interface is also through a file descriptor 
 - socket descriptor, we have receive() and send() (more flexible) instead of read() and write()
