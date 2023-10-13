@@ -15,9 +15,15 @@
 - Everything in linux is a file, the networking interface is also through a file descriptor 
 - socket descriptor, we have receive() and send() (more flexible) instead of read() and write()
 - mainly two types of sockets: Datagram - SOCK_DGRAM and Stream - SOCK_STREAM 
-- Stream - reliable two way communication  
-
-
+- Datagram - Unreliable one way push of a message, Stream - reliable two way communication 
+- Addresses: 
+    - IP address - 4 byte to address a connected node on the internet
+    - Port - to address an app within a node
+- Order of byte: 
+    - Little Endian came up as a good idea because it was faster to do addition on 8bit processors 
+    - data within a byte remains same 
+    - Little Endian vs Big Endian, communicating devices must no in what order the other reads data
+    - systems call are there to take care of this (htons, htonl, ntohs, ntohl)
 
 #### MERN Fullstack Development 
 - MongoDB - as the database application for the app 
