@@ -20,10 +20,12 @@
     - IP address - 4 byte to address a connected node on the internet
     - Port - to address an app within a node
 - Order of byte: 
-    - Little Endian came up as a good idea because it was faster to do addition on 8bit processors 
-    - data within a byte remains same 
-    - Little Endian vs Big Endian, communicating devices must no in what order the other reads data
+    - Little Endian vs Big Endian (Network Byte Order)
+    - data within a byte remains same, but the order differs
+    - there are performance differences, ex: casting int to short is faster with little endian 
+    - communicating devices must no in what order the other reads data
     - systems call are there to take care of this (htons, htonl, ntohs, ntohl)
+    - TCP/IP uses big endian while transporting packets 
 
 #### MERN Fullstack Development 
 - MongoDB - as the database application for the app 
@@ -59,3 +61,4 @@ jwt.verify(token, secretOrPublicKey, [options, callback])
 #### Resources: 
 [JS Event Loop](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/html/split/index.html)
+[Byte Order (Endianness)](https://www.youtube.com/watch?v=CounrFEsOeA)
