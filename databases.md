@@ -56,6 +56,8 @@ Latency Numbers for Storage Hierarchy:
     - Hybrid Storage Model (PAX):  
         - Partition Attributes Across. 
 
+
+
 #### Database Design Goals:
 - Maximize sequential access from disk 
 - Each layer of the DBMS needs to be independent of the other layers 

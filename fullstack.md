@@ -119,6 +119,27 @@
     - we also headers and body that you can use to send data in. 
 - Authentication 
 
+##### TypeScript 
+- A type strict compiler that makes sure that all the types assigned and used are consistent in the code. 
+- The typescript compiler alerts the user about errors during compilation and spits out a .js file which can be executed 
+- interfaces and types are two abstractions provided by TS. 
+    - interfaces are a way define types for complex objects. they are able to consolidate multiple variable types into one abstraction 
+    - can be extended with other interfaces too. 
+    - types are similar, they cannot be extended but they are useful to union/intersect interfaces and abstract things. 
+
+```TS
+// interface example 
+interface Rectangle {
+    width: number, 
+    height: number 
+}
+
+// shape example 
+type Rectange = {
+    width: number, 
+    height: number
+}
+```
 
 ```JS 
 jwt.sign(payload, secretOrPrivateKey, [options, callback])
